@@ -74,6 +74,7 @@ sequenceDiagram
         NC->>DS: 7. Re-queries timing & sync status
      DS-->>NC: 8. Reports updated status
     end
+   PS->>PS: 9. Proceeds with live production, switching sources as needed
 ```
 
 ## Revision History
