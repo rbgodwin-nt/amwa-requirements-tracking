@@ -77,7 +77,7 @@ sequenceDiagram
     end
 ```
 
-## Use Case Steps Table
+### Use Case Steps Table
 
 | Step | Action | Description |
 |------|--------|-------------|
@@ -88,7 +88,7 @@ sequenceDiagram
 | 5    | Notify End Users | NMOS End Users' monitoring or control applications receive updated connection information from the IS-04 Registry seamlessly. |
 | 6    | Continue Streaming | The media stream continues with the updated parameters without interruption or degradation of service. |
 
-## Alternate/Exception Flows
+### Alternate/Exception Flows
 
 | Step | Action | Description |
 |------|--------|-------------|
@@ -97,7 +97,7 @@ sequenceDiagram
 | 4a.3 | Request Manual Intervention | If repeated attempts fail, manual intervention is requested to resolve the issue. |
 
 
-## Revision History
+## 9. Revision History
 
 | Version | Date       | Author          | Description                                  | Status  |
 |---------|------------|-----------------|----------------------------------------------|---------|
