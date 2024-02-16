@@ -61,4 +61,4 @@ This use case describes the process of synchronizing multiple video and audio so
 
 | V. | Date | Author | Description | Status |
 |---|---|---|---|---|
-| 1.0 | [Insert Date] | [Author's Name] | Initial creation of the live production switching synchronization use case. | Draft |
+| 1.0 | [February 16, 2024] | [Randy Godwin] | Initial creation of the live production switching synchronization use case. | Draft |
