@@ -101,7 +101,7 @@ sequenceDiagram
 
 | Version | Date       | Author          | Description                                  | Status  |
 |---------|------------|-----------------|----------------------------------------------|---------|
-| 1.0     | [Insert Date] | [Author's Name] | Initial creation of the Dynamic Update use case. | Draft   |
+| 1.0     | [February 17,2024 | [Randy Godwin] | Initial creation of the Dynamic Update use case. | Draft   |
 |         |              |                 |                                              |         |
 |         |              |                 |                                              |         |
 
