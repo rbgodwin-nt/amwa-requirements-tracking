@@ -56,11 +56,24 @@ This use case describes the process of synchronizing multiple video and audio so
 ## 8. Visual Model
 
 ```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+sequenceDiagram
+    actor PS as Production Staff
+    participant NC as NMOS Controller
+    participant DS as Devices
+ 
+    PS->>+NC: 1. Initiates live production setup
+    NC->>+DS: 2. Queries timing & sync status
+    DS-->>-NC: 3. Reports status
+    NC->>NC: 4. Assesses sync requirements
+    NC->>PS: 5a. Confirms readiness for live switching
+    alt All sources meet sync criteria
+        NC->>PS: 5a. Confirms readiness for live switching
+    else Sync issue detected
+        NC->>PS: 5b. Alerts sync issue
+        PS->>+NC: 6. Adjusts affected device or sources alternative
+        NC->>DS: 7. Re-queries timing & sync status
+     DS-->>NC: 8. Reports updated status
+    end
 ```
 
 ## Revision History
