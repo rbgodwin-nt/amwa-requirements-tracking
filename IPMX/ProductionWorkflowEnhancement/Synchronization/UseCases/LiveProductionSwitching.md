@@ -55,7 +55,13 @@ This use case describes the process of synchronizing multiple video and audio so
 
 ## 8. Visual Model
 
-*Note: A workflow diagram or UML sequence diagram illustrating the synchronization process and decision points would be included here, enhancing the understanding of the flow and interactions.*
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
 
 ## Revision History
 
