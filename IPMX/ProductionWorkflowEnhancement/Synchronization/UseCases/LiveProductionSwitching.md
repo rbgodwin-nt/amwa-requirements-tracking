@@ -77,6 +77,20 @@ sequenceDiagram
    PS->>PS: 9. Proceeds with live production, switching sources as needed
 ```
 
+| Step | Description |
+|------|-------------|
+| 1    | Production Staff initiates live production setup. |
+| 2    | NMOS Controller queries timing & sync status of devices. |
+| 3    | Devices report their current timing and synchronization status. |
+| 4    | NMOS Controller assesses synchronization requirements based on reported statuses. |
+| 5a   | If all sources meet synchronization criteria, NMOS Controller confirms readiness for live switching. |
+| 5b   | If a synchronization issue is detected, NMOS Controller alerts the Production Staff of the issue. |
+| 6    | Production Staff adjusts the affected device or sources an alternative. |
+| 7    | NMOS Controller re-queries timing & sync status of the adjusted devices. |
+| 8    | Devices report their updated timing and synchronization status |
+| 9    | Production Staff continues with their production tasks.
+
+
 ## Revision History
 
 | V. | Date | Author | Description | Status |
