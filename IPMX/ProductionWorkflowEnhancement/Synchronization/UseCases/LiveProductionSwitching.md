@@ -6,7 +6,7 @@
 - **Document Owner:** []
 - **Version:** 1.0
 - **Status:** Draft
-- **Date:** [Debruary 16 2024]
+- **Date:** [February 16 2024]
 
 ## 1. Brief Description
 
