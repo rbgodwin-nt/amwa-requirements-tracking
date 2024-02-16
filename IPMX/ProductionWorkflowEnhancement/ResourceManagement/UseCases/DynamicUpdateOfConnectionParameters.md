@@ -75,3 +75,34 @@ sequenceDiagram
             U->>U: 4a.3 Manual intervention requested
         end
     end
+```
+
+## Use Case Steps Table
+
+| Step | Action | Description |
+|------|--------|-------------|
+| 1    | Change Parameters | The NMOS device (sender) changes its media streaming parameters, such as switching from 780P to 1280P. |
+| 2    | Detect Change | The change is detected by the sender device's control software. |
+| 3    | Send Update | The NMOS device (sender) sends an update to the IS-04 Registry with the new connection parameters. |
+| 4    | Update Records | The IS-04 Registry updates its records to reflect the new parameters without requiring the connection to be re-established. |
+| 5    | Notify End Users | NMOS End Users' monitoring or control applications receive updated connection information from the IS-04 Registry seamlessly. |
+| 6    | Continue Streaming | The media stream continues with the updated parameters without interruption or degradation of service. |
+
+## Alternate/Exception Flows
+
+| Step | Action | Description |
+|------|--------|-------------|
+| 4a.1 | Log Error & Alert | If the IS-04 Registry cannot update the connection parameters, it logs the error and sends an alert to the NMOS End User. |
+| 4a.2 | Attempt Resend | The NMOS device (sender) attempts to resend the updated parameters. |
+| 4a.3 | Request Manual Intervention | If repeated attempts fail, manual intervention is requested to resolve the issue. |
+
+
+## Revision History
+
+| Version | Date       | Author          | Description                                  | Status  |
+|---------|------------|-----------------|----------------------------------------------|---------|
+| 1.0     | [Insert Date] | [Author's Name] | Initial creation of the Dynamic Update use case. | Draft   |
+|         |              |                 |                                              |         |
+|         |              |                 |                                              |         |
+
+
