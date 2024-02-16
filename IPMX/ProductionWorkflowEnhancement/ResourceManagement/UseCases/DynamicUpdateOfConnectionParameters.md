@@ -7,7 +7,7 @@
 - **Document Owner:** [Owner's Name]
 - **Version:** 1.0
 - **Status:** Draft
-- **Date:** [Insert Date]
+- **Date:** [February 16, 2024]
 
 ## 1. Brief Description
 
