@@ -1,4 +1,4 @@
-# Use Case: Live Production Switching
+# Use Case: IPMX Live Production Switching
 
 ## Document Information
 
@@ -27,7 +27,7 @@ This use case describes the process of synchronizing multiple video and audio so
 ## 4. Basic Flow
 
 1. The production staff initiates the live production setup.
-2. The NMOS Controller queries the timing modes and synchronization status of all connected devices.
+2. The IPMX Controller queries the timing modes and synchronization status of all connected devices.
 3. Devices report their current timing and synchronization status to the IPMX Controller.
 4. The IPMX Controller assesses the synchronization requirements based on the production setup.
 5. If all sources meet the synchronization criteria, the IPMX Controller confirms readiness for live switching.
@@ -47,7 +47,7 @@ This use case describes the process of synchronizing multiple video and audio so
 
 ## 7. Supplemental Requirements
 
-- **Security:** All interactions with the NMOS Controller must be authenticated to prevent unauthorized access.
+- **Security:** All interactions with the IPMX Controller must be authenticated to prevent unauthorized access.
 - **Scalability:** The system must be capable of handling an increase in the number of sources without degradation in performance.
 
 ## 8. Visual Model
