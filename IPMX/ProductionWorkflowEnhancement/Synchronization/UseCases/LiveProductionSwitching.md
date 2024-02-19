@@ -81,10 +81,10 @@ sequenceDiagram
 | 4    | IPMX Controller assesses synchronization requirements based on reported statuses. |
 | 5   | If all sources meet synchronization criteria, IPMX Controller confirms readiness for live switching. |
 | 5a1   | If a synchronization issue is detected, IPMX Controller alerts the Production Staff of the issue. |
-| 5a2   | Production Staff adjust any devices that have an issue with Timing Mode and Syncronization realated parameters |
+| 5a2   | Production Staff adjust any devices that have an issue with Timing Mode and Syncronization related parameters |
 | 5a3   | The IPMX Controlled re-quieres device Timing statuses |
 | 5a4   | Devices send their latest Timing modes and statuses. Return to step 4.|
-| 6    | Production Staff continues with their production tasks.
+| 6    | Production Staff continues with their production tasks.  
 
 
 ## Revision History
