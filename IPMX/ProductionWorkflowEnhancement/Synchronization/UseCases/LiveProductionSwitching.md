@@ -47,8 +47,8 @@ This use case describes the process of synchronizing multiple video and audio so
 
 ## 7. Supplemental Requirements
 
-- **Security:** All interactions with the IPMX Controller must be authenticated to prevent unauthorized access.
-- **Scalability:** The system must be capable of handling an increase in the number of sources without degradation in performance.
+- **Security:** All interactions with the IPMX Controller SHOULD be authenticated to prevent unauthorized access.
+- **Scalability:** The system MUST be capable of handling an increase in the number of sources without degradation in performance.
 
 ## 8. Visual Model
 
