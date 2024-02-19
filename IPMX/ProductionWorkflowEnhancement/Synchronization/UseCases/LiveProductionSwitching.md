@@ -60,7 +60,7 @@ sequenceDiagram
  
     PS->>+IPMXC: 1. Initiates live production setup
     IPMXC->>+DS: 2. Queries timing & sync status
-    DS-->>-IPMXC: 3. Reports status
+    DS-->>-IPMXC: 3. Report status
     IPMXC->>IPMXC: 4. Assesses sync requirements
     alt All sources meet sync criteria
         IPMXC->>PS: 5. Confirms readiness for live switching
