@@ -58,7 +58,7 @@ sequenceDiagram
     participant IPMXC as IPMX Controller
     participant DS as Devices
  
-    PS->>+NC: 1. Initiates live production setup
+    PS->>+IPMXC: 1. Initiates live production setup
     IPMXC->>+DS: 2. Queries timing & sync status
     DS-->>-IPMXC: 3. Reports status
     IPMXC->>IPMXC: 4. Assesses sync requirements
