@@ -61,7 +61,7 @@ sequenceDiagram
     DS-->>-NC: 3. Reports status
     NC->>NC: 4. Assesses sync requirements
     alt All sources meet sync criteria
-        NC->>PS: 5a. Confirms readiness for live switching
+        NC->>PS: 5. Confirms readiness for live switching
     else Sync issue detected
         NC->>PS: 5a1. Alerts sync issue
         PS->>+NC: 5a2. Adjusts affected device or sources alternative
