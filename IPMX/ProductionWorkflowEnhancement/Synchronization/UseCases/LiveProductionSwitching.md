@@ -33,11 +33,6 @@ This use case describes the process of synchronizing multiple video and audio so
 
 ## 5. Alternate/Exception Flows
 
-- **3a. Device Synchronization Issue:** If any device does not meet the synchronization criteria:
-    1. The NMOS Controller alerts the production staff of the specific synchronization issue.
-    2. The production staff adjusts the affected device or sources an alternative.
-    3. The process resumes at step 2.
-
 - **5a. Manual Synchronization Required:** If automatic synchronization fails:
     1. The NMOS Controller provides synchronization parameters to the production staff.
     2. The production staff manually adjusts the devices based on provided parameters.
@@ -65,16 +60,15 @@ sequenceDiagram
     NC->>+DS: 2. Queries timing & sync status
     DS-->>-NC: 3. Reports status
     NC->>NC: 4. Assesses sync requirements
-    NC->>PS: 5a. Confirms readiness for live switching
     alt All sources meet sync criteria
         NC->>PS: 5a. Confirms readiness for live switching
     else Sync issue detected
-        NC->>PS: 5b. Alerts sync issue
-        PS->>+NC: 6. Adjusts affected device or sources alternative
-        NC->>DS: 7. Re-queries timing & sync status
-     DS-->>NC: 8. Reports updated status
+        NC->>PS: 5a1. Alerts sync issue
+        PS->>+NC: 5a2. Adjusts affected device or sources alternative
+        NC->>DS: 5a3. Re-queries timing & sync status
+     DS-->>NC: 5a4. Reports updated status
     end
-   PS->>PS: 9. Proceeds with live production, switching sources as needed
+   PS->>PS: 6. Proceeds with live production, switching sources as needed
 ```
 
 | Step | Description |
