@@ -66,7 +66,7 @@ sequenceDiagram
         IPMXC->>PS: 5. Confirms readiness for live switching
     else Sync issue detected
         IPMXC->>PS: 5a1. Alerts sync issue
-        PS->>+IPMXC: 5a2. Adjusts affected device or sources alternative
+        PS->>+DS: 5a2. Maually adjust affected devices
         IPMXC->>DS: 5a3. Re-queries timing & sync status
      DS-->>IPMXC: 5a4. Reports updated status
     end
