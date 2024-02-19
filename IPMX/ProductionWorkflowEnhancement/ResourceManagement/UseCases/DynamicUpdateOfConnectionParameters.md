@@ -10,7 +10,7 @@
 
 ## 1. Brief Description
 
-This use case outlines the process for dynamically updating connection parameters (e.g., framerate, bits-per-pixel) of an ongoing media stream, which could be of type RTMP, in the IS-04 registry. This allows for dynamic changes of media parameters without the need to break down and re-establish the connection, thereby minimizing unnecessary network traffic and preventing the thrashing of applications that monitor or control the NMOS deployment.
+This use case outlines the process for dynamically updating connection parameters (e.g., framerate, bits-per-pixel) of an ongoing dynamic media stream in the IS-04 registry. This allows for changes of media parameters without the need to break down and re-establish the connection, thereby minimizing unnecessary network traffic and preventing the thrashing of applications that monitor or control the NMOS deployment.
 
 ## 2. Actors
 
