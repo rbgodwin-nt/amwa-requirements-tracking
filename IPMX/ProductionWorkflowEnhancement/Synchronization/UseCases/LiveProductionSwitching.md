@@ -15,26 +15,28 @@ This use case describes the process of synchronizing multiple video and audio so
 ## 2. Actors
 
 - **Production Staff:** Individuals responsible for managing and executing the live production.
-- **NMOS Controller:** The system used to manage device connections and synchronization.
+- **IPMX Controller:** The system used to manage IPMX device connections and synchronization.
 
 ## 3. Pre-Conditions
 
-- The production staff has logged into the NMOS Controller system.
-- Video and audio sources are connected to the NMOS Controller.
+- The production staff has logged into the IPMX Controller system.
+- Video and audio sources are connected to the IPMX Controller.
+- Video and audio devices support report of Timing Mode Status
+- Video and audio devices allow manual setting of Timing Modes 
 
 ## 4. Basic Flow
 
 1. The production staff initiates the live production setup.
 2. The NMOS Controller queries the timing modes and synchronization status of all connected devices.
-3. Devices report their current timing and synchronization status to the NMOS Controller.
-4. The NMOS Controller assesses the synchronization requirements based on the production setup.
-5. If all sources meet the synchronization criteria, the NMOS Controller confirms readiness for live switching.
+3. Devices report their current timing and synchronization status to the IPMX Controller.
+4. The IPMX Controller assesses the synchronization requirements based on the production setup.
+5. If all sources meet the synchronization criteria, the IPMX Controller confirms readiness for live switching.
 6. The production staff proceeds with live production, switching between sources as needed.
 
 ## 5. Alternate/Exception Flows
 
 - **5a. Manual Synchronization Required:** If automatic synchronization fails:
-    1. The NMOS Controller provides synchronization parameters to the production staff.
+    1. The IPMX Controller provides synchronization parameters to the production staff.
     2. The production staff manually adjusts the devices based on provided parameters.
     3. The process resumes at step 4.
 
@@ -53,20 +55,20 @@ This use case describes the process of synchronizing multiple video and audio so
 ```mermaid
 sequenceDiagram
     actor PS as Production Staff
-    participant NC as NMOS Controller
+    participant IPMXC as IPMX Controller
     participant DS as Devices
  
     PS->>+NC: 1. Initiates live production setup
-    NC->>+DS: 2. Queries timing & sync status
-    DS-->>-NC: 3. Reports status
-    NC->>NC: 4. Assesses sync requirements
+    IPMXC->>+DS: 2. Queries timing & sync status
+    DS-->>-IPMXC: 3. Reports status
+    IPMXC->>IPMXC: 4. Assesses sync requirements
     alt All sources meet sync criteria
-        NC->>PS: 5. Confirms readiness for live switching
+        IPMXC->>PS: 5. Confirms readiness for live switching
     else Sync issue detected
-        NC->>PS: 5a1. Alerts sync issue
-        PS->>+NC: 5a2. Adjusts affected device or sources alternative
-        NC->>DS: 5a3. Re-queries timing & sync status
-     DS-->>NC: 5a4. Reports updated status
+        IPMXC->>PS: 5a1. Alerts sync issue
+        PS->>+IPMXC: 5a2. Adjusts affected device or sources alternative
+        IPMXC->>DS: 5a3. Re-queries timing & sync status
+     DS-->>IPMXC: 5a4. Reports updated status
     end
    PS->>PS: 6. Proceeds with live production, switching sources as needed
 ```
@@ -74,13 +76,13 @@ sequenceDiagram
 | Step | Description |
 |------|-------------|
 | 1    | Production Staff initiates live production setup. |
-| 2    | NMOS Controller queries timing & sync status of devices. |
+| 2    | IPMX Controller queries timing & sync status of devices. |
 | 3    | Devices report their current timing and synchronization status. |
-| 4    | NMOS Controller assesses synchronization requirements based on reported statuses. |
-| 5a   | If all sources meet synchronization criteria, NMOS Controller confirms readiness for live switching. |
-| 5b   | If a synchronization issue is detected, NMOS Controller alerts the Production Staff of the issue. |
+| 4    | IPMX Controller assesses synchronization requirements based on reported statuses. |
+| 5a   | If all sources meet synchronization criteria, IPMX Controller confirms readiness for live switching. |
+| 5b   | If a synchronization issue is detected, IPMX Controller alerts the Production Staff of the issue. |
 | 6    | Production Staff adjusts the affected device or sources an alternative. |
-| 7    | NMOS Controller re-queries timing & sync status of the adjusted devices. |
+| 7    | IPMX Controller re-queries timing & sync status of the adjusted devices. |
 | 8    | Devices report their updated timing and synchronization status |
 | 9    | Production Staff continues with their production tasks.
 
