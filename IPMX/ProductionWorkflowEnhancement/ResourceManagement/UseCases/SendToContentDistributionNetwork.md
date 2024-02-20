@@ -27,11 +27,9 @@ This use case describes the process whereby an IPMX production facility selects 
 ## 4. Basic Flow
 
 1. The Production Manager identifies which media streams are to be included in the muxed output.
-2. The Production Manager inputs the selection into the IPMX System.
-3. The IPMX System dynamically combines the selected media streams into a single muxed output.
-4. The muxed output is formatted according to the specifications required by the Content Distribution Provider.
-5. The IPMX System sends the muxed output to the Content Distribution Provider.
-6. The Content Distribution Provider confirms receipt of the muxed output and integrates it into their distribution workflow.
+2. The IPMX System dynamically combines the selected media streams into a single muxed output.
+3. The IPMX System sends the muxed output to the Content Distribution Provider.
+4. The Content Distribution Provider confirms receipt of the muxed output and integrates it into their distribution workflow.
 
 ## 5. Alternate/Exception Flows
 
@@ -60,6 +58,7 @@ sequenceDiagram
 
     PM->>IPMX: 1. Selects media streams
     IPMX->>IPMX: 2. Combines streams into muxed output
+    IPMX->>IPMX: 3. Sends muxed output
     IPMX->>CDP: 3. Sends muxed output
     CDP->>CDP: 4. Confirms receipt & integrates output
 
@@ -82,7 +81,6 @@ sequenceDiagram
 | 3b   | The Production Manager adjusts the selection to resolve the incompatibility and resends the information. |
 | 3c   | The IPMX System successfully combines the adjusted streams into a new muxed output. |
 | 3d   | The IPMX System resends the corrected muxed output to the Content Distribution Provider. |
-```
 
 ## 9. Revision History
 
