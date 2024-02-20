@@ -6,7 +6,7 @@
 - **Document Owner:** [Owner's Name]
 - **Version:** 1.0
 - **Status:** Draft
-- **Date:** YYYY-MM-DD
+- **Date:** February 20, 2024
 
 ## 1. Brief Description
 
@@ -80,5 +80,5 @@ sequenceDiagram
 
 | Version | Date       | Author          | Description                                          | Status |
 |---------|------------|-----------------|------------------------------------------------------|--------|
-| 1.0     | YYYY-MM-DD | [Author's Name] | Initial creation of the use case for dynamic configuration of NMOS connections. | Draft  |
+| 1.0     | February 20, 2024 | Randy Godwin | Initial creation of the use case for dynamic configuration of NMOS connections. | Draft  |
 
