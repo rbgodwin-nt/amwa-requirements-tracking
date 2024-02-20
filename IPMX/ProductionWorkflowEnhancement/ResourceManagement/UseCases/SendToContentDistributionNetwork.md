@@ -69,8 +69,8 @@ sequenceDiagram
         IPMX->>IPMX: 3c. Successfully combines streams
         IPMX->>CDP: 3d. Resends muxed output
     end
-
-## Corresponding Steps Table
+```
+### Corresponding Steps Table
 
 | Step | Description |
 |------|-------------|
